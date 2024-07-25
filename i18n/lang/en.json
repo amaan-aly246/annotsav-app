@@ -25,12 +25,13 @@
    "Soil Type":"Soil Type",
    "Register":"Register",
    "Units": "Units",
-   "Square meter": "sq metres",
+   "Square meter": "Sq meter",
    "hecter": "hecter",
    "Last Updated" : "Last Updated",
    "hours": "hours",
-   "km/h": "km/h"
-
-
+   "km/h": "km/h",
+   "Change language": "Change language",
+   "Hindi": "Hindi",
+   "English": "English"
 }
 

@@ -39,25 +39,25 @@ export default function Page() {
   // }
 
 // function to toggle between the languages
-const changeLng = async () => {
-  console.log("hello ")
-  try {
-    if(i18next.language == 'en'){
-      await AsyncStorage.setItem("lng", "hi")
-      i18next.changeLanguage("hi")
-    }
-    else{
-      await AsyncStorage.setItem("lng", "en")
-      i18next.changeLanguage("en")
-    }
-  } catch (error) {
-   console.log(error);
-  }
-  finally{
-    const result = await AsyncStorage.getItem('lng');
-    console.log("stored pref is " , result);
-  }  
-}
+// const changeLng = async () => {
+//   console.log("hello ")
+//   try {
+//     if(i18next.language == 'en'){
+//       await AsyncStorage.setItem("lng", "hi")
+//       i18next.changeLanguage("hi")
+//     }
+//     else{
+//       await AsyncStorage.setItem("lng", "en")
+//       i18next.changeLanguage("en")
+//     }
+//   } catch (error) {
+//    console.log(error);
+//   }
+//   finally{
+//     const result = await AsyncStorage.getItem('lng');
+//     console.log("stored pref is " , result);
+//   }  
+// }
   const sendCommand = useCallback((topic: string, message: string, options = {}) => {
     publishToTopic(topic, message, options);
   }, [publishToTopic]);
@@ -161,9 +161,9 @@ const changeLng = async () => {
           </Button>
         </XStack>
         {/* this button is for testing purposes only.  */}
-        <Button size="$4" fontSize={12} onPress={() => changeLng()}>
+        {/* <Button size="$4" fontSize={12} onPress={() => changeLng()}>
           language change
-        </Button>
+        </Button> */}
       </YStack>
       <Card.Footer padded></Card.Footer>
     </Card>
