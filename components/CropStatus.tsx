@@ -16,16 +16,17 @@ const CropStatus = () => {
   const { mqttClient, mqttData, mqttError, subscribeToTopics, publishToTopic } =
     useMqtt()
 
-  const lastTopicRecived = (topic: string | null | undefined) => {
+  const lastTopicRecived = (topic: string | null | undefined) => 
+    {
     if (topic) {
       dateLastTopicRecived = new Date().toLocaleDateString("en-IN")
       timeLastTopicRecived = new Date().toLocaleTimeString("en-IN")
     }
-
     return `${dateLastTopicRecived} at ${timeLastTopicRecived}`
   }
 
-  useEffect(() => {
+  useEffect(() => 
+    {
     const initialize = async () => {
       console.log("Subscribing to topics")
       subscribeToTopics(["pv0/moisture"], { qos: 2 })
