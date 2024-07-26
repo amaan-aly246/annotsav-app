@@ -98,6 +98,10 @@ export function SelectDemoItem(props: SelectProps) {
     { name: t("Square meter") },
     { name: t("hectare") },
   ]
+
+  useEffect(() => {
+    setVal(t(val))
+  }, [i18n.language])
   const theme = useTheme()
   return (
     <Select

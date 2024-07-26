@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
   modalButton: {
     padding: 10,
     borderRadius: 5,
+    marginBottom: 30,
   },
   buttonText: {
     color: "#fff",
